@@ -184,6 +184,7 @@
             // printReceiptButton
             // 
             this.printReceiptButton.BackColor = System.Drawing.Color.Black;
+            this.printReceiptButton.Enabled = false;
             this.printReceiptButton.Location = new System.Drawing.Point(155, 518);
             this.printReceiptButton.Name = "printReceiptButton";
             this.printReceiptButton.Size = new System.Drawing.Size(124, 29);
@@ -238,6 +239,7 @@
             // calculateChangeButton
             // 
             this.calculateChangeButton.BackColor = System.Drawing.Color.Black;
+            this.calculateChangeButton.Enabled = false;
             this.calculateChangeButton.Location = new System.Drawing.Point(141, 427);
             this.calculateChangeButton.Name = "calculateChangeButton";
             this.calculateChangeButton.Size = new System.Drawing.Size(171, 29);

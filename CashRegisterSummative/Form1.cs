@@ -42,6 +42,10 @@ namespace CashRegisterSummative
 
         private void calculateButton_Click(object sender, EventArgs e)
         {
+            //enable next button
+            calculateChangeButton.Enabled = true;
+
+            //clear error messages
             receiptOutput.Text = "";
             try
             {
@@ -62,15 +66,18 @@ namespace CashRegisterSummative
             }
             catch
             {
+                //display error message
                 receiptOutput.Text = "Error: Must Be A Valid Number";
             }
         }
 
         private void printReceiptButton_Click(object sender, EventArgs e)
         {
+            //play sound
             SoundPlayer player = new SoundPlayer(Properties.Resources._345053__azumarill__epson_receipt_printer6);
             player.Play();
 
+            //print out reciept
             Thread.Sleep(400);
             receiptOutput.Text = "            Divo's Model Trains";
             Refresh();
@@ -129,6 +136,10 @@ namespace CashRegisterSummative
 
         private void calculateChangeButton_Click(object sender, EventArgs e)
         {
+            //enable next button
+            printReceiptButton.Enabled = true;
+
+            //clear error messages
             receiptOutput.Text = "";
             try
             {
@@ -143,12 +154,14 @@ namespace CashRegisterSummative
             }
             catch
             {
+                //display error message
                 receiptOutput.Text = "Error: Must Be A Valid Number";
             }
         }
 
         private void newOrderButton_Click(object sender, EventArgs e)
         {
+            //clear all text
             receiptOutput.Text = "";
             trainsInput.Text = "";
             tracksInput.Text = "";
@@ -158,6 +171,10 @@ namespace CashRegisterSummative
             totalOutput.Text = "";
             tenderedInput.Text = "";
             changeOutput.Text = "";
+
+            //disable buttons
+            calculateChangeButton.Enabled = false;
+            printReceiptButton.Enabled = false;
         }
     }
 }
